@@ -33,7 +33,7 @@ function App() {
   }
 
   function removeTour(id) {
-    let itemSelected = tours.filter((item) => item.id != id);
+    let itemSelected = tours.filter((item) => item.id !== id);
     setTours(itemSelected);
     if (itemSelected.length <= 0) {
       setText("No Tours Left");
@@ -56,7 +56,7 @@ function App() {
           {tours.map((item) => {
             return (
               <div key={item.id} className="cardTour">
-                <img src={item.image} alt="image" />
+                <img src={item.image} alt="tour" />
                 <div className="cardTour_info">
                   <div className="cardTour_namePrice">
                     <h4>{item.name}</h4>
